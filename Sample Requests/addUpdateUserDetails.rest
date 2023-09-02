@@ -1,0 +1,26 @@
+PATCH http://localhost:8090/api/user/add-update-blog-details/save-add-update-user-details
+Content-Type: application/json
+
+{   
+    "name": "Uday Singh",
+    "userName": "udaysinghdbz",
+    "userEmail": "udaysinghdbz@gmail.com",
+    "userPassword": "Udays@123"
+}
+
+###
+
+PATCH http://localhost:8090/api/user/add-update-blog-details/login-using-user-details
+Content-Type: application/json
+
+{
+    "userEmail": "udaysinghdbz@gmail.com",
+    "userPassword": "Udays@123"
+}
+
+###
+
+GET http://localhost:8090/api/user/add-update-blog-details/check-user-logged-in
+
+
+###

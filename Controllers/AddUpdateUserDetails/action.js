@@ -1,5 +1,7 @@
 const axios = require ('axios');
 const bcrypt = require('bcrypt');
+const express = require('express');
+const session = require('express-session');
 require('dotenv').config();
 
 const users = [];
@@ -84,3 +86,15 @@ module.exports.loginUsingUserDetails = async (req, res) => {
     }
 }
 
+module.exports.checkUserLoggedIn = async(req, res) => {
+    try {
+        var errorObject = {};
+        errorObject["inFuntion"] = "registrationWithUserDetails";
+        errorObject["errorBody"] = "";
+        errorObject["timestamp"] = "";
+
+        console.log("Session:", req.session);
+    } catch (error) {
+        console.error("Error in checkUserLoggedIn", error);
+    }
+}
